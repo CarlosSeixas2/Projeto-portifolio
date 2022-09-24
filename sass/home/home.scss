@@ -1,0 +1,190 @@
+//declarando variaveis
+$back-color: #54BAB9; // ou esse aqui #1572A1
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: aliceblue;
+}
+
+body{
+    background-color: $back-color;
+}
+
+.menu{
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161616;
+    //background-image: url('../img/code02.jpg');
+    background-position-y: 10%;
+    background-position-x: 0%;
+    background-blend-mode: darken;
+    height: 90px;
+
+    img{
+        width: 50px;
+        height: auto;
+
+        &:hover{
+            transition: 1.5s;
+            transform: rotate(360deg);
+        }
+    }
+
+    .links-menu{
+        display: flex;
+        column-gap: 30px;
+    }
+
+    a{
+        color: white;
+        padding: 11px 20px;
+        font-size: 15px;
+        border-radius: 40px;
+
+        &:hover{
+            border: 2.5px solid rgb(14, 91, 233);
+            transition: 700ms;
+        }
+    }
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    height: 100vh;
+
+    .apresentacao{
+        color: aliceblue;
+        width: 44%;
+    }
+
+    .img-apre{  
+        display: block;
+        margin-left: 250px;
+        padding: 0px 10px;
+        padding-bottom: 30px;
+        background-color: #FEFBE7;
+        border: 2px solid black;
+        border-radius: 2%;
+
+        img{
+            display: block;
+            margin: 10px auto;
+            align-items: flex-start;
+        }
+
+        p{
+            display: block;
+            margin: 0 auto;
+            flex-direction: column;
+            color: black;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: sans-serif;
+        }
+    }
+
+    p{
+        font-size: 24px;
+        text-align: center;
+        line-height: 160%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    h1{
+        font-size: 46px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 160%;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 550px;
+        margin-left: 5%; 
+    }
+
+    #p1{
+        font-weight: 200;
+        text-align: start;
+        margin-left: 12%; 
+        white-space: nowrap;    
+        overflow: hidden;  
+    }
+
+    #p2{
+        font-weight: 200;
+        margin-left: 26%; 
+        text-align: end;
+        padding-right: 3px;
+        border-right: 2px solid white;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .typing-animation{
+        animation: animcursor 500ms steps(40) infinite normal, animname 5s 0s normal;
+    }
+
+    @keyframes animname {
+        from{
+            width: 0; //para estar escondida
+        }
+        to{
+            width: 18em;
+        }
+    }
+
+    @keyframes animcursor{
+        from{
+            border-right-color: white;
+        }
+
+        to{
+            border-right-color: transparent;
+        }
+    }
+}
+
+.info-finais{
+    height: 90px;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+
+    .infos-cont{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-left: 20px;
+        font-size: 19px;
+        font-family: sans-serif;
+        width: 350px;
+        height: 90px;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+        height: 90px;
+        padding-left: 110px;
+        width: 500px;
+
+        img{
+            height: 45%;
+        }
+    }
+
+    .info-desenvolvedor{
+            margin-left: 10%;
+    }
+}
